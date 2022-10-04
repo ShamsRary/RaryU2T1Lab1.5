@@ -4,13 +4,18 @@ public class Point {
 
     public Point(int x, int y)
     {
-        double xValue = x;
-        double yValue = y;
+        this.x = x;
+        this.y = y;
+//        int xValue = x;
+//        int yValue = y;
+
+        //return x + "" + y;
     }
 
-    public Point(int x)
+    public Point(int num)
     {
-        y = x;
+        x = num;
+        y = num;
     }
 
     public Point()
@@ -19,22 +24,22 @@ public class Point {
         x = 0;
     }
 
-    public int getx()
+    public int getX()
     {
         return x;
     }
 
-    public int gety()
+    public int getY()
     {
         return y;
     }
 
-    public void setx(int newX)
+    public void setX(int newX)
     {
         x = newX;
     }
 
-    public void sety(int newY)
+    public void setY(int newY)
     {
         y = newY;
     }
@@ -45,7 +50,30 @@ public class Point {
 
     public String quadrant()
     {
+        if (x > 0 && y > 0)
+        {
+            return "quadrient 1";
+        }
 
+        else if (x < 0 && y > 0)
+        {
+            return "quadreient 2";
+        }
+
+        else if (x < 0 && y < 0)
+        {
+            return "quadrient 3";
+        }
+
+        else if (x > 0 && y < 0)
+        {
+            return "quadreient 4";
+        }
+
+        else if (x == 0 && y == 0) {
+            return "origin";
+        }
+    return "On axis";
     }
 
 }
